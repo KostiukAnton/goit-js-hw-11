@@ -11,26 +11,21 @@
     <header class="header">
       <div class="container">
         <nav class="nav">
-          <!-- <a class="nav-logo" href="./index.html" aria-label="Site logo">
-            <svg class="nav-logo-icon" width="100" height="30">
-              <use href="{=$icon-path}"></use>
-            </svg>
-          </a> -->
-          <ul class="nav-list">
-            <li class="nav-item">
-              <a class="nav-link {=$highlight-act}" href="./1-timer.html">Timer</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {=$highlight-curr}" href="./2-snackbar.html">Snackbar</a>
-            </li>
-          </ul>
+         
         </nav>
       </div>
     </header>
 
     <main>
-    
+    <form class="search-form" autocomplete="off">
+        <input class="search-input" type="search" name="search-images" placeholder="Search images..." autofocus />
+      <button class="submit" type="submit" >Search</button>
+    </form>
+    <ul class="gallery"></ul>
+    <div class="loader-wrapper" style="display: none;">
+      <div class="loader"></div>
+    </div>
     </main>
-    
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

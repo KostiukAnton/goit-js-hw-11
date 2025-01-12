@@ -17,146 +17,38 @@
 @import url('./back-link.css');
 @import url('./footer.css');
 
-.data-timer {
+.search-form {
+  width: 371px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  margin-left: 156px;
-  margin-top: 36px;
   gap: 8px;
 }
 
-.data-timer-input {
-  width: 258px;
-  height: 20px;
-  padding-left: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  /* border-radius: 4px; */
+.search-input {
+  width: 272px;
   font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    color: #2e2f42;
+  color: #2e2f42;
+  border-radius: 4px;
+  border-color: #808080;
+  padding: 8px 16px;
 }
 
-.data-timer-button {
-  width: 75px;
-  height: 40px;
+.search-input:hover {
+border-color: #000000;
+}
+
+.submit {
+  width: 91px;
+  background: #4e75ff;
   border-radius: 8px;
   padding: 8px 16px;
-  border: 0;
-  font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    color: #fff;
-    background: #4e75ff;
-}
-
-.data-timer-button:hover {
-background: #6c8cff;
-}
-.data-timer-button:disabled {
-  background: #cfcfcf;
-  color: #989898;
-}
-
-.timer {
-  display: flex;
-  margin-left: 156px;
-  margin-top: 32px;
-  gap: 24px;
-  width: 346px;
-}
-.field {
-  display: flex;
-  flex-direction: column;
-}
-.value {
-  font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 40px;
-    line-height: 1.2;
-    letter-spacing: 0.04em;
-    color: #2e2f42;
-}
-.label {
-  font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #2e2f42;
-    text-transform: uppercase
-}
-
-.form {
-  margin-top: 36px;
-  margin-left: 156px;
-  width: 360px;
-}
-.delay {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  gap: 8px;
-  height: 72px;
-  font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    color: #2e2f42;
-}
-
-.delay-input {
-  height: 38px;
-  border: 1px solid #808080;
-    border-radius: 4px;
-  padding-left: 16px;
-  padding-right: 8px;
-}
-.delay-input:hover {
-  border: 1px solid #000;
-}
-.delay-input:focus {
-  border-color: #4e75ff;
-  outline: none;
-}
-
-.state {
-  text-align: left;
-    letter-spacing: 0.04em;
-}
-
-fieldset {
-border: 1px solid #808080;
-border-radius: 4px;
-margin-top: 16px;
-display: flex;
-justify-content: space-around;
-padding-top: 24px;
-padding-bottom: 8px;
-font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #2e2f42;
-}
-
-fieldset:hover {
-  border: 1px solid #000;
-}
-
-
-.form-button {
-  margin-top: 24px;
-  width: 360px;
-  height: 40px;
-  border-radius: 8px;
-  border: 0;
-    padding: 8px 16px;
-  background: #4e75ff;
+  border: none;
   font-family: "Montserrat", sans-serif;
     font-weight: 500;
     font-size: 16px;
@@ -164,11 +56,157 @@ fieldset:hover {
     letter-spacing: 0.04em;
     color: #fff;
 }
-
-.form-button:hover {
+.submit:hover {
   background: #6c8cff;
 }
 
-.iziToast {
-  width: 383px !important;
+.gallery {
+  display: flex;
+  width: 1128px;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+}
+
+.item {
+  width: 358px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #808080;
+  overflow: hidden;
+  height: fit-content;
+  flex-direction: column;
+}
+
+.image-info {
+  display: flex;
+  height: 48px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 25px;
+
+}
+
+.info-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33333;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+.info-value {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+}
+
+.item img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.conteiner-img {
+  height: 150px;
+  overflow: hidden;
+}
+
+.loader-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.808);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.loader {
+  width: 32px;
+  height: 90px;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  border-radius: 50% 50% 0 0;
+  border-bottom: 10px solid #FF3D00;
+  background-color: hsla(0, 3%, 94%, 0.647);
+  background-image: radial-gradient(ellipse at center, hsl(0, 0%, 100%) 34%, #FF3D00 35%, #FF3D00 54%, #FFF 55%), linear-gradient(#FF3D00 10px, transparent 0);
+  background-size: 28px 28px;
+  background-position: center 20px, center 2px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  animation: animloaderBack 1s linear infinite alternate;
+}
+
+.loader::before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: 0px 15px #FF3D00 inset;
+  top: 67px;
+}
+
+.loader::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 34px;
+  height: 34px;
+  top: 112%;
+  background: radial-gradient(ellipse at center, #ffdf00 8%, rgba(249, 62, 0, 0.6) 24%, rgba(0, 0, 0, 0) 100%);
+  border-radius: 50% 50% 0;
+  background-repeat: no-repeat;
+  background-position: -44px -44px;
+  background-size: 100px 100px;
+  box-shadow: 4px 4px 12px 0px rgba(255, 61, 0, 0.5);
+  box-sizing: border-box;
+  animation: animloader 1s linear infinite alternate;
+}
+
+@keyframes animloaderBack {
+
+  0%,
+  30%,
+  70% {
+    transform: translateY(0px);
+  }
+
+  20%,
+  40%,
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: 4px 4px 12px 2px rgba(255, 61, 0, 0.75);
+    width: 34px;
+    height: 34px;
+    background-position: -44px -44px;
+    background-size: 100px 100px;
+  }
+
+  100% {
+    box-shadow: 2px 2px 8px 0px rgba(255, 61, 0, 0.5);
+    width: 30px;
+    height: 28px;
+    background-position: -36px -36px;
+    background-size: 80px 80px;
+  }
 }
